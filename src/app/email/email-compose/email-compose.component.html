@@ -1,0 +1,30 @@
+
+<form (submit)="onSubmitEmailForm(emailForm)" #emailForm="ngForm">
+  <mat-card >
+        <mat-card-header>
+                
+                <mat-card-title>Compose Email Here...</mat-card-title>
+                
+        </mat-card-header>
+        <div class="fields-container">
+        <mat-form-field>
+                <mat-label>To</mat-label>
+            <input matInput placeholder="receiver's address" ngModel name="to">
+        </mat-form-field>
+     
+        <mat-form-field>
+                <mat-label>Subject</mat-label>
+            <input matInput placeholder="subject" ngModel name="subject">
+        </mat-form-field>
+
+        <mat-form-field>
+                <mat-label>Message</mat-label>
+            <textarea matInput placeholder="message" rows="6" ngModel name="body"></textarea>
+        </mat-form-field>
+    </div>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" type="submit">SEND</button>
+         
+          </mat-card-actions>
+  </mat-card>
+</form>
